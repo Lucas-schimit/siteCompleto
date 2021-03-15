@@ -4,6 +4,7 @@
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/CSS/style.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -127,20 +128,23 @@
         <form>
           <div class="form-group">
             <label for="exampleFormControlInput1">Nome</label>
-            <input type="text" class="form-control" id="nome">
+            <input type="text" class="form-control" id="nome" onkeyup = 'validNome()'>
           </div>
+          <div id='txtNome'></div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+            <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" onkeyup = 'validaEmail()'>
           </div>
+          <div id='txtEmail'></div>
          
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Exemplo de textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="exampleFormControlTextarea1">Sua Sugestão</label>
+            <textarea name = 'sugestão' id ='sugestão' class="form-control" id="exampleFormControlTextarea1" rows="3" onkeyup = 'validaSugestao()'></textarea>
           </div>
+          <div id='txtSugestao'></div>
 
           <div class="form-group d-flex justify-content-end">
-            <button class="btn btn-outline-success">Enviar</button>
+            <button class="btn btn-outline-success" onclick="enviar()">Enviar</button>
           </div>
         </form>
       </div>
@@ -157,11 +161,11 @@
 <hr>
 <footer>
 
-  <div class="row mb-3">
+  <div class="row mb-3 container1">
     <div class="col-md-12 d-flex justify-content-center">
 
       <a href="https://www.facebook.com"  target="_blank" class="p-3">
-        <img class="tm-social" src="assets/img/Facebook-test.png" alt="Logo do Facebook">
+        <img class="tm-social" src="" alt="Logo do Facebook">
     </a>
 
     <a href="https://br.linkedin.com/" target="_blank">
@@ -191,5 +195,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
